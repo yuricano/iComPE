@@ -1,0 +1,60 @@
+/* Off Canvas settings */
+
+.off-canvas.position-right {
+    border-left: 1px solid #ddd;
+}
+
+.nav.navbar-stacked {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li {
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding: 15px 10px 15px 35px;
+        a {
+            padding: 10px 0 !important;
+            color: #555 !important;
+            text-indent: -40px;
+            margin-left: 25px;
+            display: block;
+            span {
+                color: #fff;
+                background-color: #000;
+                border-radius: 50%;
+                line-height: 30px;
+                text-align: center;
+                margin: 0 10px 0 0;
+                padding: 8px;
+            }
+            i {
+                color: #ccc;
+                font-size: 10px !important;
+                position: relative;
+                left: -5px;
+            }
+            small {
+                text-align: right;
+                background: #fff;
+                color: #ccc;
+                border: 1px solid #ddd;
+                padding: 3px 7px;
+                border-radius: 15px;
+                margin: 0 0 0 7px;
+                font-size: 10px;
+            }
+            img {
+                width: 95%;
+                padding: 0;
+                border-radius: 4px;
+                margin: 10px 0;
+            }
+        }
+        border-bottom: 1px solid #eee;
+        position: relative;
+    }
+    &.sidebar-right-content {
+        padding-bottom: 150px;
+    }
+}

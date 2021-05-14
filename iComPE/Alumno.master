@@ -1,0 +1,245 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Alumno.master.cs" Inherits="Alumno" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+     <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="Nuestra modalidad facilita la accesibilidad académica, enriquece el aprendizaje tecnológico y favorece la internacionalización" />
+    <meta name="abstract" content="En el Instituto nos caracterizamos por transmitir a nuestros estudiantes la pasión por su formación, y en su carrera, buscando potencializar su talento al máximo" />
+    <meta name="keywords" content="iCom, universidad iCom, universidades en méxico, universidad en linea, universidad en línea, oferta educativa" />
+    <meta name="Classification" content="education" />
+    <meta name="designer" content="Yuri Cano" />
+    <meta name="owner" content="iCom" />
+    <meta name="category" content="education" />
+    <meta name="coverage" content="Worldwide" />
+    <meta name="distribution" content="Global" />
+    <meta name="rating" content="General" />
+    <meta name="revisit-after" content="7 days" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta property="og:url" content="http://icom.education" />
+    <meta property="og:title" content="iCom" />
+    <meta name="google-site-verification" content="jMhpm59_pTQQXCTIrMqM81fGPDkfTgeA3Eg6UPKA-pQ" />
+    <link rel="shortcut icon" type="image/x-icon" href="/logo.ico" />
+
+    <title>iCom : Plataforma</title>
+
+    <link rel="stylesheet" href="assets/css/gridlex.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="assets/css/foundation.css" />
+    <link rel="stylesheet" href="assets/css/palette.css" />
+    <link rel="stylesheet" href="assets/sass/css/dashboard.css" />
+    <link rel="stylesheet" href="assets/sass/css/dashboard.css" />
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="assets/css/dripicon.css" />
+    <link rel="stylesheet" href="assets/css/typicons.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="assets/css/themify-icons.css" />
+    <link rel="stylesheet" href="assets/css/Montserrat-Hairline.css" />
+    <link rel="stylesheet" href="assets/sass/css/theme.css" />
+
+    <!-- JS -->
+    <script src="../../assets/js/pace/pace.js"></script>
+    <link rel="stylesheet" href="assets/js/pace/themes/orange/pace-theme-flash.css" />
+    <link rel="stylesheet" href="assets/js/slicknav/slicknav.css" />
+    <script src="../../assets/js/vendor/modernizr.js"></script>
+
+    <link rel="stylesheet" href="assets/css/themify-icons.css" />
+    <link rel="stylesheet" href="assets/css/Montserrat-Hairline.css" />
+
+    <script src="../../assets/js/jquery.js"></script>
+    <script src="../../assets/js/waypoints.min.js"></script>
+    <script src="../../assets/js/what-input.js"></script>
+    <script src="../../assets/js/foundation.js"></script>
+
+    <!-- main edumix javascript -->
+    <script src="../../assets/js/slimscroll/jquery.slimscroll.js"></script>
+    <script src="../../assets/js/slicknav/jquery.slicknav.js"></script>
+    <script src="../../assets/js/sliding-menu-fixed.js"></script>
+    <script src="../../assets/js/scriptbreaker-multiple-accordion-1.js"></script>
+    <script src="../../assets/js/number/jquery.counterup.min.js"></script>
+    <script src="../../assets/js/circle-progress/jquery.circliful.js"></script>
+    <script src="../../assets/js/app.js"></script>
+    <script src="../../assets/js/number-progress-bar/jquery.velocity.min.js"></script>
+    <script src="../../assets/js/number-progress-bar/number-pb.js"></script>
+    <script src="../../assets/js/loader/loader.js"></script>
+    <script src="../../assets/js/loader/demo.js"></script>
+    <script src="../../assets/js/flot/jquery.flot.js"></script>
+    <script src="../../assets/js/flot/jquery.flot.resize.min.js"></script>
+    <script src="../../assets/js/flot/jquery.flot.pie.min.js"></script>
+    <script src="../../assets/js/flot/jquery.flot.categories.min.js"></script>
+    <script src="../../assets/js/skycons/skycons.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script "async" src="https://www.googletagmanager.com/gtag/js?id=UA-170640496-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-170640496-1');
+    </script>
+</head>
+
+<body">
+    <form id="frmPE" runat="server">
+        <!-- Menu -->
+
+        <div class="off-canvas-wrapper over-flow-hidden">
+            <div class="off-canvas-wrapper-inner data-off-canvas-wrapper">
+                <!-- right sidebar wrapper -->
+                <div class="inner-wrap">
+                    <!-- Right sidemenu -->
+                    <div id="skin-select" class="fixed-nest">
+                        <!--      Toggle sidemenu icon button -->
+                        <a id="toggle"></a>
+                        <!--      End of Toggle sidemenu icon button -->
+                        <div class="skin-part">
+                            <div id="tree-wrap">
+                                <!-- Profile -->
+                                <div class="profile" style="height: 100px !important;">
+                                    <img src="../../assets/img/huella-blanca.png" height="20" />
+                                    <h3>DEJA HUELLA.</h3>
+                                    <h3 class="float-center">
+                                        <asp:Label runat="server" ID="lblUsuarioGral" Width="200px "></asp:Label>
+                                    </h3>
+                                </div>
+
+                                <br />
+                                <br />
+                                <!-- End of Profile -->
+
+                                <!-- Menu sidebar begin-->
+                                <div class="fixed-nest-sidebar">
+                                    <div class="side-bar sidebar-fixed">
+                                        <ul id="menu-showhide" class="topnav slicknav">
+                                            <li>
+                                                <a id="menu-select" href="#" title="Resumen"><i class="intial palette-Purple-700 bg ti-receipt"></i><span>Resumen</span> </a>
+                                                <ul>
+                                                    <li>
+                                                        <asp:LinkButton runat="server" ID="btnResumen"
+                                                            Text="Resumen" OnClick="btnResumen_Click"> </asp:LinkButton>
+                                                    </li>
+                                                    
+                                                    <li>
+                                                        <asp:LinkButton runat="server" ID="btnContacto"
+                                                            Text="Ayuda" OnClick="btnContacto_Click"> </asp:LinkButton>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li>
+                                                <a class="tooltip-tip" href="#" title="Perfil"><i class="secondary hollow bg ti-user"></i><span>Calificaciones</span> </a>
+                                                <ul>
+                                                    <li>
+                                                        <asp:LinkButton runat="server" ID="btCalificaciones"
+                                                            Text="Calificaciones" OnClick="btnCalificaciones_Click"> </asp:LinkButton>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li>
+                                                <a class="tooltip-tip" href="#" title="Perfil"><i class="secondary hollow bg ti-user"></i><span>Tesorería</span> </a>
+                                                <ul>
+                                                    <li>
+                                                        <asp:LinkButton runat="server" ID="btnEstadoCta"
+                                                            Text="Estado de cuenta" OnClick="btnEdoCta_Click"> </asp:LinkButton>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li>
+                                                <a class="tooltip-tip" href="#" title="Perfil"><i class="secondary hollow bg ti-user"></i><span>Escolar</span> </a>
+                                                <ul>
+                                                    <li>
+                                                        <asp:LinkButton ID="btnMaterias" runat="server" 
+                                                            Text="Mis materias" OnClick="btnMaterias_Click" />
+                                                    </li>
+
+                                                    <li>
+                                                        <asp:LinkButton ID="btnCursos" runat="server" Text="Mis cursos" OnClick="btnCursos_Click" />
+                                                    </li>
+
+                                                    <li>
+                                                        <asp:LinkButton runat="server" ID="btnBiblioteca"
+                                                            Text="Biblioteca" OnClick="btnBiblioteca_Click"> </asp:LinkButton>
+                                                    </li>
+
+                                                    <li>
+                                                        <asp:LinkButton runat="server" ID="btnCalendario"
+                                                            Text="Calendario Escolar" OnClick="btnCalendario_Click"> </asp:LinkButton>
+                                                    </li>
+
+                                                    <li>
+                                                        <asp:LinkButton runat="server" ID="btnServSoc"
+                                                            Text="Servicio Social" OnClick="btnServSoc_Click"> </asp:LinkButton>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li>
+                                                <a class="tooltip-tip" href="#" title="Perfil"><i class="secondary hollow bg ti-user"></i><span>Perfil</span> </a>
+                                                <ul>
+                                                    <li>
+                                                        <asp:LinkButton runat="server" ID="btnDatos"
+                                                            Text="Modificar datos" OnClick="btnDatos_Click"> </asp:LinkButton>
+                                                    </li>
+
+                                                    <li>
+                                                        <asp:LinkButton runat="server" ID="btnContrasena"
+                                                            Text="Modificar contraseña" OnClick="btnContrasena_Click"> </asp:LinkButton>
+                                                    </li>
+                                                </ul>
+                                            </li>
+
+                                            <li>
+                                                <a class="tooltip-tip" href="#" title="Aviso Privacidad"><i class="secondary hollow bg ti-user"></i><span>Aviso Privacidad</span> </a>
+                                                <ul>
+                                                    <li>
+                                                <asp:LinkButton runat="server" ID="btnAviso"
+                                                    Text="Aviso Privacidad" OnClick="btnAviso_Click"> </asp:LinkButton>
+                                            </li>
+                                                </ul>
+                                            </li>
+
+                                            <li>
+                                                <asp:LinkButton runat="server" ID="btnSalir"
+                                                    Text="Salir" OnClick="btnSalir_Click"> </asp:LinkButton>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- end of Rightsidemenu -->
+                    <div class="wrap-fluid" id="paper-bg">
+                        <!-- breadcrumbs -->
+                        <!-- Container Begin -->
+                        <div class="large-12 columns">
+                            <div class="row">
+                                <div class="large-12 columns" style="padding-top: 60px;">
+                                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                    </asp:ContentPlaceHolder>
+                                </div>
+                                <!--End of Right Side-->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Container Begin -->
+                </div>
+                <!-- end paper bg -->
+            </div>
+        </div>
+
+        <script>
+            $(document).foundation();
+        </script>
+    </form>
+</body>
+</html>
