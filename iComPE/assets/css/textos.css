@@ -1,0 +1,49 @@
+li#line1 span#a {
+    display: inline;
+}
+
+li#line1:hover span#a {
+    display: none;
+}
+
+li#line1 span#b {
+    display: none;
+}
+
+li#line1:hover span#b {
+    display: inline;
+}
+
+/* */
+li#line2 span#c {
+    display: inline;
+}
+
+li#line2:hover span#c {
+    display: none;
+}
+
+li#line2 span#d {
+    display: none;
+}
+
+li#line2:hover span#d {
+    display: inline;
+}
+
+/* */
+li#line3 span#e {
+    display: inline;
+}
+
+li#line3:hover span#e {
+    display: none;
+}
+
+li#line3 span#f {
+    display: none;
+}
+
+li#line3:hover span#f {
+    display: inline;
+}

@@ -15,13 +15,13 @@ public partial class app_Administracion_Alumno : System.Web.UI.Page
         }
     }
 
-    protected void btnAgregar_Click(object sender, EventArgs e)
+    protected void BtnAlta_Click(object sender, EventArgs e)
     {
         Application["idusuario"] = "0";
-        Response.Redirect("~/app/Perfiles/AlumnoView.aspx");
+        Response.Redirect("~/app/Administracion/AlumnoAlta.aspx");
     }
 
-    protected void btnFiltrar_Click(object sender, EventArgs e)
+    protected void BtnFiltrar_Click(object sender, EventArgs e)
     {
         try
         {
@@ -147,7 +147,7 @@ public partial class app_Administracion_Alumno : System.Web.UI.Page
     #region Log
     protected void ResgitraLog(string sMensaje)
     {
-        Log._Log(Convert.ToInt32(Session["id"]), "app_Administracion_Alumno", sMensaje);
+        Log._Log(Convert.ToInt32(Session["id"]), "app_Administracion_AlumnoNuevo", sMensaje);
         lblMensaje.Text = "<br />" + sMensaje;
         mp1.Show();
     }

@@ -52,6 +52,10 @@
     <link rel="stylesheet" href="assets/css/themify-icons.css" />
     <link rel="stylesheet" href="assets/css/Montserrat-Hairline.css" />
 
+    <link rel="stylesheet" href="assets/css/textos.css" />
+    <link rel="stylesheet" href="assets/css/redes.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+
     <script src="../../assets/js/jquery.js"></script>
     <script src="../../assets/js/waypoints.min.js"></script>
     <script src="../../assets/js/what-input.js"></script>
@@ -74,6 +78,7 @@
     <script src="../../assets/js/flot/jquery.flot.pie.min.js"></script>
     <script src="../../assets/js/flot/jquery.flot.categories.min.js"></script>
     <script src="../../assets/js/skycons/skycons.js"></script>
+
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script "async" src="https://www.googletagmanager.com/gtag/js?id=UA-170640496-1"></script>

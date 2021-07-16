@@ -26,6 +26,14 @@
                             <asp:DropDownList runat="server" ID="DdlPeriodo"></asp:DropDownList>
                             </label>
                         </div>
+                        
+                        <div class="medium-4 columns">
+                            <label>
+                                &nbsp;
+                                <asp:Button runat="server" Text="Alta Alumno" ID="BtnAlta" OnClick="BtnAlta_Click"
+                                    CssClass="boton-accion button success" />
+                            </label>
+                        </div>
 
                         <!--
                         <div class="medium-4 columns">
@@ -47,7 +55,7 @@
                     <div class="large-12 columns">
                         <div class="medium-1 columns">
                             <label>
-                                <asp:Button runat="server" Text="Filtrar" ID="btnFiltrar" OnClick="btnFiltrar_Click"
+                                <asp:Button runat="server" Text="Filtrar" ID="BtnFiltrar" OnClick="BtnFiltrar_Click"
                                     CssClass="boton-accion button success" />
                             </label>
                         </div>
