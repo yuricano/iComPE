@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.master" AutoEventWireup="true"
+    ValidateRequest="false" EnableEventValidation="false" 
     CodeFile="DocumentosView.aspx.cs"
     Inherits="app_Administracion_DocumentosView" %>
 
