@@ -42,6 +42,12 @@ public partial class Admin : System.Web.UI.MasterPage
         Response.Redirect("~/app/Administracion/Alumno.aspx");
     }
 
+    // Pagos
+    protected void BtnAdminPago_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("~/app/Administracion/PagosWeb.aspx");
+    }
+
     protected void btnDocumentos_Click(object sender, EventArgs e)
     {
         Response.Redirect("~/app/Administracion/Documentos.aspx");

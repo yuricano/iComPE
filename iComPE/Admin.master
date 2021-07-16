@@ -156,14 +156,15 @@
 
                                                 </ul>
                                             </li>
+
                                             <li>
                                                 <a class="tooltip-tip" href="#" title="Administración"><i class="secondary hollow bg ti-folder"></i><span>Administración</span> </a>
                                                 <ul>
                                                     <li>
                                                         <asp:LinkButton runat="server" ID="btnAdminAlumno"
-                                                            Text="Alumno" OnClick="btnAdminAlumno_Click"> </asp:LinkButton>
+                                                            Text="Alumno Admin. Cta." OnClick="btnAdminAlumno_Click"> </asp:LinkButton>
                                                     </li>
-
+                                                    
                                                     <li>
                                                         <asp:LinkButton runat="server" ID="btnConceptos"
                                                             Text="Conceptos" OnClick="btnConceptos_Click"> </asp:LinkButton>
