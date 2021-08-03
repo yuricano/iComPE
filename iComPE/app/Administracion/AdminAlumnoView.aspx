@@ -152,6 +152,45 @@
                             </label>
                         </div>
                     </div>
+                    
+                    <div class="large-12 columns">
+                        <div class="medium-3 columns">
+                            <label>
+                                Tipo de transferencia
+                                <asp:DropDownList runat="server" ID="DdlTipoTransferrencia">
+                                        <asp:ListItem Value="0">Selecciona</asp:ListItem>
+                                        <asp:ListItem Value="1">Pago con TC/TD</asp:ListItem>
+                                        <asp:ListItem Value="2">Depósito Bancario</asp:ListItem>
+                                        <asp:ListItem Value="3">Depósito Tienda Conveniencia</asp:ListItem>
+                                        <asp:ListItem Value="3">Otro</asp:ListItem>
+                                    </asp:DropDownList>
+                            </label>
+                        </div>
+
+                        <div class="medium-3 columns">
+                            <label>
+                                Número de TC/TD
+                                    <asp:TextBox runat="server" ID="TxtTCTD" 
+                                        Enabled="true"></asp:TextBox>
+                            </label>
+                        </div>
+
+                        <div class="medium-3 columns">
+                            <label>
+                                Fecha de vencimiento
+                                    <asp:TextBox runat="server" ID="TxtVencimiento" placeholder="00/00" 
+                                        Enabled="true"></asp:TextBox>
+                            </label>
+                        </div>
+                        
+                        <div class="medium-3 columns">
+                            <label>
+                                CVV
+                                    <asp:TextBox runat="server" ID="TxtCVV" placeholder="000" 
+                                        Enabled="true"></asp:TextBox>
+                            </label>
+                        </div>
+                    </div>
 
                     <div class="row">
                         <div class="large-12 columns">

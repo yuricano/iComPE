@@ -1,25 +1,24 @@
 ﻿using iCom_Generales;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Specialized;
 using System.Configuration;
 using System.Data;
 using System.IO;
 using System.Net;
-using System.Web;
-using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
 public partial class app_Administracion_DocumentosView : System.Web.UI.Page
 {
     static DataTable dtDatos = new DataTable();
     static DataTable dtFiltro = new DataTable();
+    static bool bGuarda = true;
 
     static int idusuariotipo = 0;
     static int iddatosgenerales = 0;
 
     static string usuario = string.Empty;
     static string contrasena = string.Empty;
+    static string CorreoUsuario = string.Empty;
 
     static string sConceptos = string.Empty;
     static string sDescuentos = string.Empty;
@@ -48,6 +47,8 @@ public partial class app_Administracion_DocumentosView : System.Web.UI.Page
                         txtMatricula.Text = dtDatos.Rows[0]["matricula"].ToString();
                         DdlCarrera.SelectedIndex = int.Parse(dtDatos.Rows[0]["idcarrera"].ToString());
                         DdlCarrera.SelectedIndex = int.Parse(dtDatos.Rows[0]["idcarrera"].ToString());
+
+                        CorreoUsuario = dtDatos.Rows[0]["email"].ToString();
 
                         archivoCarpeta(@"C:\Desarrollo\Documentos\1041");
                     }
@@ -116,6 +117,55 @@ public partial class app_Administracion_DocumentosView : System.Web.UI.Page
             return;
         }
     }
+
+    // Envía correo de validación de doctos faltantes
+    protected void BtnCorreo_Click(object sender, EventArgs e)
+    {
+        string sLista = string.Empty;
+
+        // Recorro la lista
+        for (int i = 0; i < chkDocumentos.Items.Count; i++)
+        {
+            if (chkDocumentos.Items[i].Selected == false)
+            {
+                sLista += chkDocumentos.Items[i].Text + ", ";
+            }
+        }
+
+        // Envía correo 
+        string sBody = "Hola " + txtNombre.Text + ", \n " +
+                "te informamos que no fuerón recibidos los siguientes documentos " + sLista + " es importante que nos los hagas llegar a la brevedad " +
+                "para poder completar tu expediente. \n " +
+                "Gracias!";
+        enviarMail(sBody, CorreoUsuario);
+
+        ResgitraLog("Se envió el correo de correo de validación de documentos del alumno.");
+
+        // Ya se envio.
+        bGuarda = false;
+        BtnCorreo.Enabled = false;
+    }
+
+    protected void enviarMail(String sBody, string sMailAlumno)
+    {
+        try
+        {
+            var client = new System.Net.Mail.SmtpClient("mail.icom.education", 25)
+            {
+                Credentials = new NetworkCredential("admisiones@icom.education", "iCom2018.!"),
+                EnableSsl = false
+            };
+            client.Send("admisiones@icom.education", sMailAlumno, "iCom Admisiones", sBody);
+            ResgitraLog("Enviando: " + sBody + " - " + sMailAlumno);
+        }
+        catch (Exception ex)
+        {
+            ResgitraLog(ex.Message);
+            return;
+        }
+    }
+
+
     #endregion
 
     #region Datos
